@@ -1,0 +1,43 @@
+\documentclass[a4paper,12pt,landscape]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage[landscape,margin=2cm]{geometry}
+
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{indentfirst}
+\usepackage{fancyhdr}
+\usepackage{needspace}
+\usepackage{tikz}
+
+\usetikzlibrary{arrows}
+\usetikzlibrary{positioning}
+
+\pagestyle{fancy}
+\lhead{Настолка пока что без названия}
+\rhead{ЛКШ}
+\rfoot{2015, август}
+
+\begin{document}
+  \begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2cm,
+    thick,main node/.style={font=\sffamily\bfseries}]
+      \node[main node] (1) {Портал};
+      
+      \node[main node] (2) [below left=1cm and 6cm of 1] {Рунный круг};
+      \node[main node] (4) [below left of=2] {Узел ауры};
+      \node[main node] (5) [below right of=2] {Телепортация};
+
+      \node[main node] (3) [below right=1cm and 6cm of 1] {Реактор};
+      \node[main node] (6) [below left=1cm and 2cm of 3] {Ядерная физика};
+      \node[main node] (7) [below right=1cm and 2cm of 3] {Добыча урана};
+      \node[main node] (8) [below of=6] {Химия};
+      \node[main node] (9) [below of=7] {ГЭС};
+      \node[main node] (10) [below of=9] {Рынок};
+      \node[main node] (11) [below of=8] {Доменная печь};
+      \node[main node] (12) [right=2cm of 11] {Турбина};
+
+      %\path[] (2) [bend right] edge node [] {} (1);
+  \end{tikzpicture}
+\end{document}
